@@ -1,7 +1,7 @@
 import React from "react";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { Controller, useForm } from "react-hook-form";
-import { Button, Text, TextInput, View } from "react-native";
+import {  Text, TextInput, TouchableOpacity, View } from "react-native";
 
 type FormData = {
   todo: string;
@@ -44,11 +44,19 @@ const TodoForm = () => {
             )}
           />
           {errors.todo && (
-            <Text className="text-red-500 absolute mt-11">{errors.todo.message}</Text>
+            <Text className="text-red-500 absolute mt-11">
+              {errors.todo.message}
+            </Text>
           )}
         </View>
 
-        <Button title="Submit" onPress={handleSubmit(onSubmit)} />
+        <TouchableOpacity
+          onPress={handleSubmit(onSubmit)}
+          className="bg-secondary border-2 p-2 rounded border-secondary"
+          activeOpacity={0.7}
+        >
+          <Text className="text-background font-bold">Add</Text>
+        </TouchableOpacity>
       </View>
     </SafeAreaView>
   );
