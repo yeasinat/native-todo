@@ -1,6 +1,35 @@
-# Welcome to Native Todo 👋
+# Native Todo App 📝
 
-## Get started
+A modern, user-friendly todo application built with React Native and Expo. Stay organized, track your tasks, and boost your productivity with this clean and intuitive mobile app.
+
+## Features
+
+- ✅ Create, view, update, and delete todos
+- 🔄 Toggle task completion status
+- 💾 Persistent storage using AsyncStorage
+- 📱 Beautiful UI with custom design system
+- 🔍 Form validation using React Hook Form
+
+## Tech Stack
+
+- React Native & Expo
+- TypeScript
+- NativeWind (Tailwind CSS for React Native)
+- React Hook Form
+- AsyncStorage
+- Expo Router for navigation
+
+## Project Structure
+
+```
+native-todo/
+├── app/                      # Main application screens
+├── assets/                   # Static assets (fonts, images)
+├── components/               # Reusable components
+├── tailwind.config.js        # Styling configuration
+```
+
+## Get Started
 
 1. Install dependencies
 
@@ -11,38 +40,42 @@
 2. Start the app
 
    ```bash
-    bun expo start
+   bun expo start
    ```
 
-In the output, you'll find options to open the app in a
+In the output, you'll find options to open the app in a:
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
+- [Development build](https://docs.expo.dev/develop/development-builds/introduction/)
 - [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
 - [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+- [Expo Go](https://expo.dev/go)
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+## Development
 
-## Get a fresh project
+This project uses [file-based routing](https://docs.expo.dev/router/introduction) with Expo Router. You can start developing by editing the files inside the **app** directory.
 
-When you're ready, run:
+### Main Screens
+
+- **Home** (`/app/index.tsx`): Welcome screen with navigation options
+- **Todo List** (`/app/todos.tsx`): View and manage all todos
+- **Add Todo** (`/app/add-todo.tsx`): Create new todo items
+
+## Reset Project
+
+When you're ready for a fresh start, run:
 
 ```bash
 npm run reset-project
 ```
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+This command will move the starter code to the **app-example** directory and create a blank **app** directory.
 
-## Learn more
+## Learn More
 
-To learn more about developing your project with Expo, look at the following resources:
+- [Expo documentation](https://docs.expo.dev/)
+- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/)
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+## Join the Community
 
-## Join the community
-
-Join our community of developers creating universal apps.
-
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+- [Expo on GitHub](https://github.com/expo/expo)
+- [Discord community](https://chat.expo.dev)
