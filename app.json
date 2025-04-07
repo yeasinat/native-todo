@@ -4,18 +4,28 @@
     "slug": "native-todo",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/images/icon.png",
+    "icon": {
+      "dark": "./assets/icons/ios-dark.png",
+      "light": "./assets/icons/ios-light.png",
+      "tinted": "./assets/icons/ios-tinted.png"
+    },
     "scheme": "myapp",
     "userInterfaceStyle": "automatic",
     "newArchEnabled": true,
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.yeasinat.nativetodo",
+      "infoPlist": {
+        "ITSAppUsesNonExemptEncryption": false
+      }
     },
     "android": {
       "adaptiveIcon": {
-        "foregroundImage": "./assets/images/adaptive-icon.png",
+        "foregroundImage": "./assets/icons/adaptive-icon.png",
+        "monochromeImage": "./assets/icons/adaptive-icon.png",
         "backgroundColor": "#ffffff"
-      }
+      },
+      "package": "com.yeasinat.nativetodo"
     },
     "web": {
       "bundler": "metro",
@@ -27,16 +37,28 @@
       [
         "expo-splash-screen",
         {
-          "image": "./assets/images/todoIcon.png",
+          "image": "./assets/icons/splash-icon-light.png",
           "imageWidth": 200,
           "resizeMode": "contain",
-          "backgroundColor": "#ffffff"
+          "backgroundColor": "#ffffff",
+          "dark": {
+            "image": "./assets/icons/splash-icon-dark.png",
+            "backgroundColor": "#000000"
+          }
         }
       ],
       "expo-font"
     ],
     "experiments": {
       "typedRoutes": true
+    },
+    "extra": {
+      "router": {
+        "origin": false
+      },
+      "eas": {
+        "projectId": "83f6be99-da8d-4d78-9eb5-5606a58e6370"
+      }
     }
   }
 }
